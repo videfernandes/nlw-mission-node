@@ -1,0 +1,44 @@
+
+//@types/express => nomes das bibliotecas de tipos.
+
+/**
+ * Get => Buscar uma informação
+ * Post=>Inserir (criar) uma informação
+ * PUT => Alterar uma informação
+ * Delete=>Remover um dado
+ * Patch => alterar uma informação específica
+ */
+
+/**
+ * Tipos de parâmetros
+ * Routes Params => https://localhost/3000/produtos/7854521224 (os parametros vem inseridos na propria rota)
+ * Query params =>  https://localhost/3000/produtos?name=teclado&description=tecladobom (sempre chave e valore cada par separado por & são parâmetros nao obrigatórios)
+ * Body Params => {
+ * "name":"teclado",
+ * "description": "teclado bom"
+ * (usado para put, post e patch)
+ * }
+ */
+
+  */
+app.get("/test", (request, response) => {
+  //request tudo que está entrando
+  //response tudo que está saindo
+  return response.send("olá !");
+});
+app.post("/test-post", (request, response) => {
+  //request tudo que está entrando
+  //response tudo que está saindo
+  return response.send("olá rota post !");
+});
+
+para instalar typeorm junto ao sqlite3
+//yarn add typeorm reflect-metadata sqlite3
+
+quando usa o sqlite eu defino que meu database vai ser um arquivo que vai estar na raiz do projeto.
+Para inicializar o bd 
+import {createConnection } from "typeorm"
+
+createConnection();
+
+repositório é a camada responsável pelo acesso ao meu banco de dados pela entidade. 
